@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>predanie</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+    <link rel="import" href="elements/index.html">
+
+    <!--script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script-->
+</head>
+
+<body>
+    <top-header>
+        <div class="wrapper">
+            <top-enter content="Личный кабинет">
+                <s-button content="Войти" mode="str-right"></s-button>
+            </top-enter>
+            <top-social items='["tw", "fb", "vk"]'></top-social>
+            <main-menu items='[
+                { "href": "#1", "title": "О фонде" },
+                { "href": "#2", "title": "Отчеты" },
+                { "href": "#3", "title": "Им помогли" },
+                { "href": "#4", "title": "Старый архив" },
+                { "href": "#5", "title": "Контакты" }
+            ]'></main-menu>
+        </div>
+    </top-header>
+    <div class="wrapper"></div>
+</body>
+</html>
