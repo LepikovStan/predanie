@@ -7,18 +7,28 @@ var _ = require('lodash');
 module.exports = function() {
     var componentsName = getComponents();
     var components = loadComponents(componentsName);
+    var stylesBefore = [
+        '@import "reset"',
+        '@import "icons"'
+    ];
+    var stylesAfter = [
+        '@import "main"'
+    ];
 
     return through.obj(processFile);
 
     function processFile() {
-        var style = '@import "reset"\n';
+        var styles = stylesBefore;
         _.map(components, function(component, tagName) {
             prepareSass(component, tagName);
-            style += '@import "' + tagName + '"\n';
+            styles.push('@import "' + tagName + '"');
         });
-        style += '@import "main"\n';
 
-        fs.writeFile('static/sass/style.sass', style, function(err) {
+        _.map(stylesAfter, function(style) {
+            styles.push(style);
+        });
+
+        fs.writeFile('static/sass/style.sass', styles.join('\n'), function(err) {
             if (err) {
                 console.log('writeFile err', err);
             }
@@ -30,10 +40,8 @@ module.exports = function() {
         var style = $component('sass').html();
         var regexp = new RegExp(':host', 'gim');
 
-        if (!style) return;
-
         style = style.replace(regexp, 'div.' + tagName);
-        style = style.replace(/^\ {8,8}/gim, '');
+        style = style.replace(/^\ {4,4}/gim, '');
         style = style.replace(/&apos;/gim, '\'');
         style = style.replace(/&amp;/gim, '&');
         style = style.replace(/&gt;/gim, '>');

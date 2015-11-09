@@ -9,7 +9,8 @@ gulp.task('run', function() {
     gulp.start([
         'prepareSass',
         'sass',
-        'prepareHtml'
+        'prepareHtml',
+        'watch'
     ]);
 });
 
@@ -23,7 +24,7 @@ gulp.task('prepareHtml', function() {
         _.map(files, function(file) {
             gulp.src('static/html/' + file)
                 .pipe(polymer())
-                .pipe(gulp.dest('../result'));
+                .pipe(gulp.dest('../www'));
         });
     });
 });
@@ -34,15 +35,15 @@ gulp.task('sass', function() {
             indentedSyntax: true,
             errLogToConsole: true
         }))
-        .pipe(gulp.dest("../result/css/"));
+        .pipe(gulp.dest("../www/css/"));
 });
 
 gulp.task('watch', function() {
     var files = [
-        './static/components/*.*',
-        './static/html/*.*'
+        //'./static/components/*.*',
+        './static/sass/*.sass'
     ];
     gulp.watch(files, function() {
-        gulp.start('run');
+        gulp.start(['prepareSass', 'sass']);
     });
 });

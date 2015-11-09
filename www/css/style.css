@@ -48,6 +48,51 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr {
 a {
   color: #00aeef; }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle; }
+  .icon.msg, .icon.envelope, .icon.phone {
+    width: 25px;
+    height: 25px;
+    background: url(../i/icons.png) no-repeat 0 0; }
+  .icon.envelope {
+    background-position: -25px 0; }
+  .icon.phone {
+    background-position: -50px 0; }
+  .icon.tw, .icon.fb, .icon.vk {
+    width: 25px;
+    height: 25px;
+    background: url(../i/social.png) no-repeat 0 0; }
+  .icon.fb {
+    background-position: -34px 0; }
+  .icon.vk {
+    background-position: -67px 0; }
+
+div.feedback-item {
+  font-size: 16px; }
+  div.feedback-item .icon {
+    margin: 0 2px 0 0; }
+
+div.feedback-phone {
+  font-size: 16px; }
+  div.feedback-phone .label {
+    color: #1f4e66; }
+  div.feedback-phone .prefix {
+    font-size: 19px;
+    color: #98aab3;
+    font-weight: bold;
+    display: inline-block; }
+  div.feedback-phone .phone {
+    font-weight: bold;
+    font-size: 27px;
+    display: inline-block; }
+
+div.logo .img-logo {
+  background: url(../i/logo.png) no-repeat 0 0;
+  width: 256px;
+  height: 105px;
+  display: block; }
+
 div.main-menu {
   display: inline-block;
   height: 50px; }
@@ -173,14 +218,31 @@ div.top-social li {
   .top-header .top-enter .s-button {
     margin: 0 0 0 15px; }
 
-.icon {
-  display: inline-block;
-  vertical-align: middle; }
-  .icon.tw, .icon.fb, .icon.vk {
-    width: 25px;
-    height: 25px;
-    background: url(../i/social.png) no-repeat 0 0; }
-  .icon.fb {
-    background-position: -34px 0; }
-  .icon.vk {
-    background-position: -67px 0; }
+.top-info {
+  height: 160px;
+  position: relative;
+  overflow: hidden; }
+  .top-info .feedback {
+    margin: 30px 0 0;
+    float: right; }
+    .top-info .feedback .feedback-phone {
+      margin: 20px 0 0 30px; }
+  .top-info .slogan {
+    position: absolute;
+    top: 105px;
+    left: 255px; }
+  .top-info .logo {
+    position: absolute;
+    top: 50%;
+    margin: -52px 0 0; }
+
+.feedback .r-col {
+  width: 240px;
+  margin: 0 0 0 40px; }
+
+.slogan {
+  font-size: 16px;
+  color: #1f4e66; }
+  .slogan .mdash {
+    color: #c3dae6;
+    margin: 0 25px; }

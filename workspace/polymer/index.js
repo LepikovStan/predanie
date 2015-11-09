@@ -49,6 +49,7 @@ module.exports = function() {
         });
         var innerHtmlRegexp = new RegExp('\{\{innerHtml\}\}', 'gim');
         tpl = tpl.replace(innerHtmlRegexp, innerHtml);
+        tpl = tpl.replace(/\{\{.*\}\}/gim, '');
 
         return tpl;
     }
