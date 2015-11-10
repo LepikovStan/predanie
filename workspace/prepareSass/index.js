@@ -8,6 +8,7 @@ module.exports = function() {
     var componentsName = getComponents();
     var components = loadComponents(componentsName);
     var stylesBefore = [
+        '@import "fonts"',
         '@import "reset"',
         '@import "icons"'
     ];

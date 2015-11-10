@@ -15,11 +15,11 @@
 
 <body>
     <top-header>
-        <top-social></top-social>
+        <main-social></main-social>
 
-        <top-enter content="Личный кабинет">
+        <enter content="Личный кабинет">
             <s-button content="Войти" mode="str-right"></s-button>
-        </top-enter>
+        </enter>
 
         <div class="main-menu">
             <ul>
@@ -31,31 +31,92 @@
             </ul>
         </div>
     </top-header>
-    <div class="wrapper top-info">
-        <logo></logo>
-        <div class="slogan">
-            <span class="mdash">&mdash;</span>
-            Фонд учрежден в 2009 году для сбора средств и помощи нуждающимся.
+    <div class="wrapper">
+        <div class="main-info">
+            <logo></logo>
+            <div class="slogan">
+                <span class="mdash">&mdash;</span>
+                Фонд учрежден в 2009 году для сбора средств и помощи нуждающимся.
+            </div>
+            <div class="cols feedback">
+                <div class="r-col">
+                    <feedback-item mode="phone">
+                        <div class="icon phone"></div>
+                        <a href="#">Заказать обратный звонок</a>
+                    </feedback-item>
+                    <feedback-phone label="Круглосуточный номер:" prefix="8 (495)" phone="722-92-79"></feedback-phone>
+                </div>
+                <div class="r-col">
+                    <feedback-item mode="envelope">
+                        <div class="icon envelope"></div>
+                        <a href="mailto:fond@predanie.ru">fond@predanie.ru</a>
+                    </feedback-item>
+                    <feedback-phone label="Телефон/факс:" prefix="8 (495)" phone="959-92-76"></feedback-phone>
+                </div>
+                <div class="r-col">
+                    <feedback-item>
+                        <div class="icon msg"></div>
+                        <a href="#">Форма обратной связи</a>
+                    </feedback-item>
+                </div>
+            </div>
         </div>
-        <div class="cols feedback">
-            <div class="r-col">
-                <feedback-item mode="phone">
-                    <a href="#">Заказать обратный звонок</a>
-                </feedback-item>
-                <feedback-phone label="Круглосуточный номер:" prefix="8 (495)" phone="722-92-79"></feedback-phone>
+        <div class="cols main-banner">
+            <div class="l-col">
+                
             </div>
             <div class="r-col">
-                <feedback-item mode="envelope">
-                    <a href="mailto:fond@predanie.ru">fond@predanie.ru</a>
-                </feedback-item>
-                <feedback-phone label="Телефон/факс:" prefix="8 (495)" phone="959-92-76"></feedback-phone>
-            </div>
-            <div class="r-col">
-                <feedback-item mode="msg">
-                    <a href="#">Форма обратной связи</a>
-                </feedback-item>
+                <div class="banner">
+                    <div class="text"><div class="inner">Помогите волонтерам помочь детям!</div></div>
+                    <img src="i/tmp/main-banner-right.png" alt="" />
+                </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="wrapper">
+            <main-social></main-social>
+            <enter content="Личный кабинет">
+                <s-button content="Войти" mode="transparent"></s-button>
+            </enter>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="#">О фонде</a></li>
+                    <li><a href="#">Отчёты</a></li>
+                    <li><a href="#">Им помогли</a></li>
+                    <li><a href="#">Старый архив</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="main-info">
+                <logo mode="uncolorized"></logo>
+                <div class="slogan">
+                    <span class="mdash">&mdash;</span>
+                    Фонд учрежден в 2009 году для сбора средств и помощи нуждающимся.
+                </div>
+                <div class="cols feedback">
+                    <div class="r-col">
+                        <feedback-item>
+                            <a href="#">Заказать обратный звонок</a>
+                        </feedback-item>
+                        <feedback-phone label="Круглосуточный номер:" prefix="8 (495)" phone="722-92-79"></feedback-phone>
+                    </div>
+                    <div class="r-col">
+                        <feedback-item>
+                            <a href="mailto:fond@predanie.ru">fond@predanie.ru</a>
+                        </feedback-item>
+                        <feedback-phone label="Телефон/факс:" prefix="8 (495)" phone="959-92-76"></feedback-phone>
+                    </div>
+                    <div class="r-col">
+                        <feedback-item>
+                            <a href="#">Форма обратной связи</a>
+                        </feedback-item>
+                    </div>
+                </div>
+            </div>
+            <div class="counters"><img src="i/counters.png" alt=""/></div>
+            <div class="copy">&copy; 2008 - 2015 Благотворительный фонд «Предание»</div>
+        </div>
+    </footer>
 </body>
 </html>

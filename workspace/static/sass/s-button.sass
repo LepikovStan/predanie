@@ -4,6 +4,11 @@ div.s-button
     display: inline-block
     vertical-align: middle
 
+    .transparent
+        &.text
+            background: none
+            box-shadow: none
+
     .text
         background: #ffff7f
         background: -webkit-linear-gradient(#ffff7f, #ffe67e)
@@ -23,18 +28,18 @@ div.s-button
         position: relative
         display: inline-block
 
-    span.str-right
+    .str-right
         padding-right: 27px
 
-    span.str-right:after
-        content: ''
-        position: absolute
-        top: 50%
-        right: 11px
-        width: 10px
-        height: 15px
-        margin: -6px 0 0
-        background: url(../i/str-r.png) no-repeat 0 0
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 11px
+            width: 10px
+            height: 15px
+            margin: -6px 0 0
+            background: url(../i/str-r.png) no-repeat 0 0
 
     button
         position: absolute
